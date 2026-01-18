@@ -17,3 +17,7 @@ Check back regularly, because this software is still under active development. N
 Note that a JavaScript version of the library also exists here for use in the Earth Engine Code Editor (browser interface):
 
 https://earthengine.googlesource.com/users/conormcmahon/CORVUS/+/refs/heads/master
+
+![Process Overview](images/figure_1.png)
+
+Fig. 1. Overall framework for phenology retrieval. In sub-plots 1 and 3, orange windows indicate zoomed-in extents for sub-plots 2 and 4. 1) Surface reflectance satellite imagery is collected and converted to a vegetation index (here the Normalized Difference Vegetation Index, NDVI); 2) Temporal filters are applied to remove pixels contaminated by clouds and other atmospheric effects; 3) Sampling steps are fixed at regular intervals in time (here, monthly); 4) Phenology values are fit using a quadratic, linear, or median value within time windows around each target timestamp; 5) Values are fit at each timestamp to produce a regularly-spaced seasonal NDVI curve; 6) The process is repeated for each pixel to produce spatial maps of seasonality.
