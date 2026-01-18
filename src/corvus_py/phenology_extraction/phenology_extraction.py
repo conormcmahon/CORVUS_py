@@ -21,7 +21,7 @@ def fit_phenology(input_collection, advance_window_width, following_window_width
     timing_interval = (max_date.difference(min_date, 'day')).divide(num_time_steps).floor()
     def sampleDate(index):
         return min_date.advance(ee.Number(index).multiply(timing_interval), 'day')
-    target_dates = ee.List.sequence(0, num_time_steps).map(sampleDate)
+    target_dates = ee.List.sequence(1, num_time_steps).map(sampleDate)
     
     # Generate and return phenology ImageCollection
     # Contains NUM_TIME_STEPS images 
